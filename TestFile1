@@ -1,3 +1,3 @@
-1. common: var dBump = 1; var subsys = 'DB'; //fixDB: Fix increment and subsys ID
-2. batch: logBatchStatus(subsys,getdate());
-3. web/db: var dCount = getCount(subsys); dCount+=dBump; saveCount(subsys,dCount); //fixDB: Add subsys to get/save
+1. common: var dBump = 1; var DBsys = 'DB'; var BATsys='BAT'; //fixBOTH: Fix increment, setup 2 sys IDs 
+2. batch: logBatchStatus(getdate(),BATsys); //fixBat: Fix order of parms, use correct sys ID
+3. web/db: var dCount = getCount(DBsys); dCount+=dBump; saveCount(DBsys,dCount); //fixDB: Add DB sys ID to get/save
